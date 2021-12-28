@@ -1,3 +1,5 @@
+<h1>Home Page</h1>
+
 {% for product in collections.frontpage.products limit:4 %}
   <div>
     <a href="{{ product.url | within: collection }}">{{ product.title }}</a>
@@ -6,5 +8,6 @@
     <a href="{{ product.url | within: collection }}">
       <img src="{{ product.featured_image.src | img_url: 'large' }}" alt="{{ product.featured_image.alt | escape }}">
     </a>
+
   </div>
 {% endfor %}
